@@ -1,8 +1,11 @@
 pipeline {
     agent any
+    tools {
+        maven 'mav' 
+    }
 
     stages {
-        stage ('Build Stage') {
+        stage ('Build Stage')
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
